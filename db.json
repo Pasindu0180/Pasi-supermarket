@@ -1,0 +1,258 @@
+{
+  "products": [
+    {
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "rfid_tag_id": "RFID001",
+      "category": "Grains & Staples",
+      "price": 1250,
+      "stock": 45,
+      "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=80",
+      "status": "In Stock"
+    },
+    {
+      "product_id": "PRD-102",
+      "product_name": "Anchor Full Cream Milk Powder 400g",
+      "rfid_tag_id": "RFID002",
+      "category": "Dairy & Beverage",
+      "price": 950,
+      "stock": 30,
+      "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=400&q=80",
+      "status": "In Stock"
+    },
+    {
+      "product_id": "PRD-103",
+      "product_name": "Maliban Gold Marie Biscuit 300g",
+      "rfid_tag_id": "RFID003",
+      "category": "Snacks & Biscuits",
+      "price": 250,
+      "stock": 60,
+      "image": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=400&q=80",
+      "status": "In Stock"
+    },
+    {
+      "product_id": "PRD-104",
+      "product_name": "White Sugar 1kg",
+      "rfid_tag_id": "RFID004",
+      "category": "Grains & Staples",
+      "price": 300,
+      "stock": 49,
+      "image": "https://images.unsplash.com/photo-1622484210800-885160867086?auto=format&fit=crop&w=400&q=80",
+      "status": "In Stock"
+    },
+    {
+      "product_id": "PRD-105",
+      "product_name": "Watawala Ceylon Black Tea 500g",
+      "rfid_tag_id": "RFID005",
+      "category": "Dairy & Beverage",
+      "price": 780,
+      "stock": 25,
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80",
+      "status": "In Stock"
+    },
+    {
+      "product_id": "PRD-106",
+      "product_name": "Fortune Sunflower Oil 1L",
+      "rfid_tag_id": "RFID006",
+      "category": "Cooking Essentials",
+      "price": 1450,
+      "stock": 18,
+      "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=400&q=80",
+      "status": "In Stock"
+    },
+    {
+      "product_id": "PRD-107",
+      "product_name": "Munchee Chocolate Biscuits 200g",
+      "rfid_tag_id": "RFID007",
+      "category": "Snacks & Biscuits",
+      "price": 320,
+      "stock": 40,
+      "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=400&q=80",
+      "status": "In Stock"
+    },
+    {
+      "product_id": "PRD-108",
+      "product_name": "Mysuru Red Dhal 1kg",
+      "rfid_tag_id": "RFID008",
+      "category": "Grains & Staples",
+      "price": 420,
+      "stock": 35,
+      "image": "https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?auto=format&fit=crop&w=400&q=80",
+      "status": "In Stock"
+    }
+  ],
+  "cart": [
+    {
+      "product_id": "PRD-102",
+      "rfid_tag_id": "RFID002",
+      "product_name": "Anchor Full Cream Milk Powder 400g",
+      "category": "Dairy & Beverage",
+      "price": 950,
+      "quantity": 1,
+      "total_price": 950,
+      "added_time": "2026-08-12T16:05:56.525Z"
+    },
+    {
+      "product_id": "PRD-103",
+      "rfid_tag_id": "RFID003",
+      "product_name": "Maliban Gold Marie Biscuit 300g",
+      "category": "Snacks & Biscuits",
+      "price": 250,
+      "quantity": 2,
+      "total_price": 500,
+      "added_time": "2026-08-12T16:56:58.492Z"
+    },
+    {
+      "product_id": "PRD-105",
+      "rfid_tag_id": "RFID005",
+      "product_name": "Watawala Ceylon Black Tea 500g",
+      "category": "Dairy & Beverage",
+      "price": 780,
+      "quantity": 1,
+      "total_price": 780,
+      "added_time": "2026-08-14T12:46:54.669Z"
+    }
+  ],
+  "transactions": [
+    {
+      "transaction_id": "TXN-1786466638376",
+      "bill_number": "PS-000125",
+      "cart_id": "CART-7892",
+      "date": "2026-08-11 16:43:58",
+      "customer_name": "Valued Customer",
+      "payment_method": "Cash",
+      "subtotal": 300,
+      "discount": 100,
+      "total": 200,
+      "items": [
+        {
+          "product_name": "White Sugar 1kg",
+          "rfid_tag_id": "RFID004",
+          "unit_price": 300,
+          "quantity": 1,
+          "total_price": 300
+        }
+      ]
+    },
+    {
+      "transaction_id": "TXN-9001",
+      "bill_number": "PS-000120",
+      "cart_id": "CART-7892",
+      "date": "2026-08-11 14:30:12",
+      "customer_name": "Sampath Perera",
+      "payment_method": "Cash",
+      "subtotal": 2450,
+      "discount": 50,
+      "total": 2400,
+      "items": [
+        {
+          "product_name": "Keeri Samba Rice 5kg",
+          "rfid_tag_id": "RFID001",
+          "unit_price": 1250,
+          "quantity": 1,
+          "total_price": 1250
+        },
+        {
+          "product_name": "Anchor Full Cream Milk Powder 400g",
+          "rfid_tag_id": "RFID002",
+          "unit_price": 950,
+          "quantity": 1,
+          "total_price": 950
+        },
+        {
+          "product_name": "Maliban Gold Marie Biscuit 300g",
+          "rfid_tag_id": "RFID003",
+          "unit_price": 250,
+          "quantity": 1,
+          "total_price": 250
+        }
+      ]
+    }
+  ],
+  "rfid_logs": [
+    {
+      "scan_id": "SCN-1786711614669",
+      "rfid_tag_id": "RFID005",
+      "product_id": "PRD-105",
+      "product_name": "Watawala Ceylon Black Tea 500g",
+      "scan_time": "06:16:54 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786553818492",
+      "rfid_tag_id": "RFID003",
+      "product_id": "PRD-103",
+      "product_name": "Maliban Gold Marie Biscuit 300g",
+      "scan_time": "10:26:58 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786550756525",
+      "rfid_tag_id": "RFID002",
+      "product_id": "PRD-102",
+      "product_name": "Anchor Full Cream Milk Powder 400g",
+      "scan_time": "09:35:56 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786550746230",
+      "rfid_tag_id": "RFID001",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:35:46 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786467149156",
+      "rfid_tag_id": "RFT",
+      "product_id": "UNKNOWN",
+      "product_name": "Unregistered Product",
+      "scan_time": "10:22:29 PM",
+      "cart_id": "CART-7518",
+      "action": "UNREGISTERED",
+      "status": "Tag Not Found in Database"
+    },
+    {
+      "scan_id": "SCN-1786464804380",
+      "rfid_tag_id": "RFID001",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:43:24 PM",
+      "cart_id": "CART-7892",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786464110327",
+      "rfid_tag_id": "RFID004",
+      "product_id": "PRD-104",
+      "product_name": "White Sugar 1kg",
+      "scan_time": "09:31:50 PM",
+      "cart_id": "CART-7892",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    }
+  ],
+  "reader_status": {
+    "connected": true,
+    "last_scanned_id": "RFID005",
+    "last_detected_product": "Watawala Ceylon Black Tea 500g",
+    "last_scan_time": "06:16:54 PM"
+  },
+  "cart_meta": {
+    "cart_id": "CART-7518",
+    "discount_amount": 0,
+    "applied_coupon": ""
+  },
+  "settings": {
+    "debounce_seconds": 3
+  }
+}
