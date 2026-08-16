@@ -2,11 +2,11 @@
   "products": [
     {
       "product_id": "PRD-101",
-      "product_name": "Keeri Samba Rice 5kg",
-      "rfid_tag_id": "RFID001",
+      "product_name": "Keeri Samba Rice 1kg",
+      "rfid_tag_id": "A5:48:0D:01",
       "category": "Grains & Staples",
-      "price": 1250,
-      "stock": 45,
+      "price": 400,
+      "stock": 44,
       "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=80",
       "status": "In Stock"
     },
@@ -22,8 +22,8 @@
     },
     {
       "product_id": "PRD-103",
-      "product_name": "Maliban Gold Marie Biscuit 300g",
-      "rfid_tag_id": "RFID003",
+      "product_name": "Maliban Gold Marie Biscuit 100g",
+      "rfid_tag_id": "5B:9C:0C:01",
       "category": "Snacks & Biscuits",
       "price": 250,
       "stock": 60,
@@ -42,11 +42,11 @@
     },
     {
       "product_id": "PRD-105",
-      "product_name": "Watawala Ceylon Black Tea 500g",
-      "rfid_tag_id": "RFID005",
+      "product_name": "Watawala Ceylon Black Tea 50g",
+      "rfid_tag_id": "B6:93:0D:01",
       "category": "Dairy & Beverage",
-      "price": 780,
-      "stock": 25,
+      "price": 150,
+      "stock": 24,
       "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80",
       "status": "In Stock"
     },
@@ -63,10 +63,10 @@
     {
       "product_id": "PRD-107",
       "product_name": "Munchee Chocolate Biscuits 200g",
-      "rfid_tag_id": "RFID007",
+      "rfid_tag_id": "5D:F0:38:06",
       "category": "Snacks & Biscuits",
       "price": 320,
-      "stock": 40,
+      "stock": 39,
       "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=400&q=80",
       "status": "In Stock"
     },
@@ -83,37 +83,71 @@
   ],
   "cart": [
     {
-      "product_id": "PRD-102",
-      "rfid_tag_id": "RFID002",
-      "product_name": "Anchor Full Cream Milk Powder 400g",
-      "category": "Dairy & Beverage",
-      "price": 950,
-      "quantity": 1,
-      "total_price": 950,
-      "added_time": "2026-08-12T16:05:56.525Z"
-    },
-    {
       "product_id": "PRD-103",
-      "rfid_tag_id": "RFID003",
-      "product_name": "Maliban Gold Marie Biscuit 300g",
+      "rfid_tag_id": "5B:9C:0C:01",
+      "product_name": "Maliban Gold Marie Biscuit 100g",
       "category": "Snacks & Biscuits",
       "price": 250,
-      "quantity": 2,
-      "total_price": 500,
-      "added_time": "2026-08-12T16:56:58.492Z"
+      "quantity": 1,
+      "total_price": 250,
+      "added_time": "2026-08-16T11:34:56.663Z"
     },
     {
       "product_id": "PRD-105",
-      "rfid_tag_id": "RFID005",
-      "product_name": "Watawala Ceylon Black Tea 500g",
+      "rfid_tag_id": "B6:93:0D:01",
+      "product_name": "Watawala Ceylon Black Tea 50g",
       "category": "Dairy & Beverage",
-      "price": 780,
+      "price": 150,
       "quantity": 1,
-      "total_price": 780,
-      "added_time": "2026-08-14T12:46:54.669Z"
+      "total_price": 150,
+      "added_time": "2026-08-16T11:37:00.915Z"
+    },
+    {
+      "product_id": "PRD-107",
+      "rfid_tag_id": "5D:F0:38:06",
+      "product_name": "Munchee Chocolate Biscuits 200g",
+      "category": "Snacks & Biscuits",
+      "price": 320,
+      "quantity": 1,
+      "total_price": 320,
+      "added_time": "2026-08-16T11:39:27.122Z"
     }
   ],
   "transactions": [
+    {
+      "transaction_id": "TXN-1786860840933",
+      "bill_number": "PS-000126",
+      "cart_id": "CART-7518",
+      "date": "2026-08-16 06:14:00",
+      "customer_name": "Valued Customer",
+      "payment_method": "Cash",
+      "subtotal": 870,
+      "discount": 0,
+      "total": 870,
+      "items": [
+        {
+          "product_name": "Keeri Samba Rice 1kg",
+          "rfid_tag_id": "A5:48:0D:01",
+          "unit_price": 400,
+          "quantity": 1,
+          "total_price": 400
+        },
+        {
+          "product_name": "Munchee Chocolate Biscuits 200g",
+          "rfid_tag_id": "5D:F0:38:06",
+          "unit_price": 320,
+          "quantity": 1,
+          "total_price": 320
+        },
+        {
+          "product_name": "Watawala Ceylon Black Tea 50g",
+          "rfid_tag_id": "B6:93:0D:01",
+          "unit_price": 150,
+          "quantity": 1,
+          "total_price": 150
+        }
+      ]
+    },
     {
       "transaction_id": "TXN-1786466638376",
       "bill_number": "PS-000125",
@@ -170,6 +204,376 @@
     }
   ],
   "rfid_logs": [
+    {
+      "scan_id": "SCN-1786880580531",
+      "rfid_tag_id": "B6:93:0D:01",
+      "product_id": "PRD-105",
+      "product_name": "Watawala Ceylon Black Tea 50g",
+      "scan_time": "05:13:00 PM",
+      "cart_id": "CART-9817",
+      "action": "Qty Increased to 2",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786880459458",
+      "rfid_tag_id": "5D:F0:38:06",
+      "product_id": "PRD-107",
+      "product_name": "Munchee Chocolate Biscuits 200g",
+      "scan_time": "05:10:59 PM",
+      "cart_id": "CART-9817",
+      "action": "Qty Increased to 2",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786880367122",
+      "rfid_tag_id": "5D:F0:38:06",
+      "product_id": "PRD-107",
+      "product_name": "Munchee Chocolate Biscuits 200g",
+      "scan_time": "05:09:27 PM",
+      "cart_id": "CART-9817",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786880220915",
+      "rfid_tag_id": "B6:93:0D:01",
+      "product_id": "PRD-105",
+      "product_name": "Watawala Ceylon Black Tea 50g",
+      "scan_time": "05:07:00 PM",
+      "cart_id": "CART-9817",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786880096662",
+      "rfid_tag_id": "5B:9C:0C:01",
+      "product_id": "PRD-103",
+      "product_name": "Maliban Gold Marie Biscuit 300g",
+      "scan_time": "05:04:56 PM",
+      "cart_id": "CART-9817",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786860832519",
+      "rfid_tag_id": "B6:93:0D:01",
+      "product_id": "PRD-105",
+      "product_name": "Watawala Ceylon Black Tea 50g",
+      "scan_time": "11:43:52 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786859963548",
+      "rfid_tag_id": "5D:F0:38:06",
+      "product_id": "PRD-107",
+      "product_name": "Munchee Chocolate Biscuits 200g",
+      "scan_time": "11:29:23 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786859744518",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 1kg",
+      "scan_time": "11:25:44 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786859573815",
+      "rfid_tag_id": "5B:9C:0C:01",
+      "product_id": "PRD-103",
+      "product_name": "Maliban Gold Marie Biscuit 300g",
+      "scan_time": "11:22:53 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786859448202",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 1kg",
+      "scan_time": "11:20:48 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786858758248",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "11:09:18 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786858616280",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "11:06:56 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786858559957",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "11:05:59 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786858545928",
+      "rfid_tag_id": "5D:F0:38:06",
+      "product_id": "UNKNOWN",
+      "product_name": "Unregistered Product",
+      "scan_time": "11:05:45 AM",
+      "cart_id": "CART-7518",
+      "action": "UNREGISTERED",
+      "status": "Tag Not Found in Database"
+    },
+    {
+      "scan_id": "SCN-1786857684850",
+      "rfid_tag_id": "RFID002",
+      "product_id": "PRD-102",
+      "product_name": "Anchor Full Cream Milk Powder 400g",
+      "scan_time": "10:51:24 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786857668367",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "10:51:08 AM",
+      "cart_id": "CART-7518",
+      "action": "Qty Increased to 2",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786857665828",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "N/A",
+      "product_name": "Cooldown Ignored",
+      "scan_time": "10:51:05 AM",
+      "cart_id": "CART-7518",
+      "action": "IGNORED",
+      "status": "Duplicate scan ignored (2s cooldown buffer)"
+    },
+    {
+      "scan_id": "SCN-1786857663925",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "10:51:03 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786857186770",
+      "rfid_tag_id": "5D:F0:38:06",
+      "product_id": "UNKNOWN",
+      "product_name": "Unregistered Product",
+      "scan_time": "10:43:06 AM",
+      "cart_id": "CART-7518",
+      "action": "UNREGISTERED",
+      "status": "Tag Not Found in Database"
+    },
+    {
+      "scan_id": "SCN-1786810999957",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:53:19 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786810975908",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:52:55 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786810958372",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:52:38 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786810951481",
+      "rfid_tag_id": "RFID002",
+      "product_id": "PRD-102",
+      "product_name": "Anchor Full Cream Milk Powder 400g",
+      "scan_time": "09:52:31 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786810942668",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:52:22 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786810901696",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:51:41 PM",
+      "cart_id": "CART-7518",
+      "action": "Qty Increased to 2",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786810897144",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:51:37 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786808300595",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:08:20 PM",
+      "cart_id": "CART-7518",
+      "action": "Qty Increased to 3",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786808218250",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:06:58 PM",
+      "cart_id": "CART-7518",
+      "action": "Qty Increased to 2",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786808196049",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:06:36 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786808081629",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "N/A",
+      "product_name": "Cooldown Ignored",
+      "scan_time": "09:04:41 PM",
+      "cart_id": "CART-7518",
+      "action": "IGNORED",
+      "status": "Duplicate scan ignored (3s cooldown buffer)"
+    },
+    {
+      "scan_id": "SCN-1786808080944",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:04:40 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786808075069",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:04:35 PM",
+      "cart_id": "CART-7518",
+      "action": "Qty Increased to 2",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786808056392",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "09:04:16 PM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786743536194",
+      "rfid_tag_id": "RFID002",
+      "product_id": "PRD-102",
+      "product_name": "Anchor Full Cream Milk Powder 400g",
+      "scan_time": "03:08:56 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786742838702",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "02:57:18 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786742779028",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "02:56:19 AM",
+      "cart_id": "CART-7518",
+      "action": "Qty Increased to 2",
+      "status": "Success"
+    },
+    {
+      "scan_id": "SCN-1786741455009",
+      "rfid_tag_id": "A5:48:0D:01",
+      "product_id": "PRD-101",
+      "product_name": "Keeri Samba Rice 5kg",
+      "scan_time": "02:34:15 AM",
+      "cart_id": "CART-7518",
+      "action": "Item Added to Cart",
+      "status": "Success"
+    },
     {
       "scan_id": "SCN-1786711614669",
       "rfid_tag_id": "RFID005",
@@ -243,12 +647,12 @@
   ],
   "reader_status": {
     "connected": true,
-    "last_scanned_id": "RFID005",
-    "last_detected_product": "Watawala Ceylon Black Tea 500g",
-    "last_scan_time": "06:16:54 PM"
+    "last_scanned_id": "B6:93:0D:01",
+    "last_detected_product": "Watawala Ceylon Black Tea 50g",
+    "last_scan_time": "05:13:00 PM"
   },
   "cart_meta": {
-    "cart_id": "CART-7518",
+    "cart_id": "CART-9817",
     "discount_amount": 0,
     "applied_coupon": ""
   },

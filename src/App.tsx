@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { Header } from './components/Header';
 import { RfidSimulator } from './components/RfidSimulator';
 import { SimpleShoppingView } from './components/SimpleShoppingView';
@@ -7,7 +8,12 @@ import { ProductManagement } from './components/ProductManagement';
 import { TransactionHistory } from './components/TransactionHistory';
 import { RfidLogAndHardware } from './components/RfidLogAndHardware';
 import { CheckoutModal } from './components/CheckoutModal';
+
 import { AppState, Transaction } from './types';
+
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from './firebase';
+
 import {
   fetchAppState,
   scanRfid,
@@ -21,7 +27,6 @@ import {
   updateProduct,
   deleteProduct,
   checkout,
-  connectSSE
 } from './services/api';
 
 export const App: React.FC = () => {
@@ -31,59 +36,96 @@ export const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const loadState = async () => {
+  const testFirebase = async () => {
     try {
-      const data = await fetchAppState();
-      setState(data);
-      setError(null);
-    } catch (err: any) {
-      setError('Failed to connect to backend server. Make sure node server.js is running.');
-    } finally {
-      setLoading(false);
+      const productRef = doc(db, "products", "A5:48:0D:01");
+      const productSnap = await getDoc(productRef);
+
+      if (productSnap.exists()) {
+        const product = productSnap.data();
+
+        console.log("Firebase product:", product);
+
+        alert(
+          "Firebase connected!\n\n" +
+          "Product: " + product.name +
+          "\nPrice: " + product.price
+        );
+      } else {
+        console.log("Product not found");
+        alert("Firebase connected, but product was not found.");
+      }
+
+    } catch (error) {
+      console.error("Firebase error:", error);
+      alert("Firebase error. Open browser Console.");
     }
   };
 
-  useEffect(() => {
+  const loadState = async () => {
+  try {
+    const data = await fetchAppState();
+    setState(data);
+    setError(null);
+  } catch (err: any) {
+    setError(
+      'Failed to connect to backend server. Make sure node server.js is running.'
+    );
+  } finally {
+    setLoading(false);
+  }
+};
+
+useEffect(() => {
+  // Load data immediately when website opens
+  loadState();
+
+  // Check backend every 1 second
+  const interval = setInterval(() => {
     loadState();
+  }, 1000);
 
-    // Subscribe to real-time Server-Sent Events (SSE) from hardware / API scans
-    const disconnectSSE = connectSSE((event) => {
-      // Reload state on any live update
-      loadState();
-    });
+  // Stop checking when website closes
+  return () => {
+    clearInterval(interval);
+  };
+}, []);
 
-    return () => {
-      disconnectSSE();
-    };
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-4">
-        <div className="text-center space-y-3">
-          <div className="w-12 h-12 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto" />
-          <p className="text-sm font-semibold text-slate-300">Loading Pasi Supermarket RFID Smart Cart System...</p>
-        </div>
+if (loading) {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-4">
+      <div className="text-center space-y-3">
+        <div className="w-12 h-12 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto" />
+        <p className="text-sm font-semibold text-slate-300">
+          Loading Pasi Supermarket RFID Smart Cart System...
+        </p>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
-  if (error || !state) {
-    return (
-      <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-4">
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-md p-6 text-center space-y-4 shadow-2xl">
-          <div className="text-rose-400 font-bold text-lg">Connection Error</div>
-          <p className="text-xs text-slate-400">{error}</p>
-          <button
-            onClick={loadState}
-            className="px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded-xl shadow-lg hover:bg-emerald-500 transition-all"
-          >
-            Retry Connection
-          </button>
+if (error || !state) {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center p-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-md p-6 text-center space-y-4 shadow-2xl">
+        <div className="text-rose-400 font-bold text-lg">
+          Connection Error
         </div>
+
+        <p className="text-xs text-slate-400">
+          {error}
+        </p>
+
+        <button
+          onClick={loadState}
+          className="px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded-xl shadow-lg hover:bg-emerald-500 transition-all"
+        >
+          Retry Connection
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
   const handleScanRfid = async (rfid_tag_id: string, force: boolean = false) => {
     await scanRfid(rfid_tag_id, force);
@@ -143,6 +185,12 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#090d16] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950">
+      <button
+  onClick={testFirebase}
+  className="m-4 p-3 bg-blue-600 text-white rounded"
+>
+  Test Firebase
+</button>
       
       {/* Supermarket Main Header */}
       <Header
